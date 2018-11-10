@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/scripts/bootstrap/dist/css/bootstrap.min.css', type='text/css')
+  body
+    div.container
+      h1= message
+      div(class="col-md-6 offset-md-3 border p-3 mt-5")
+        form.test-form(method="post", action="/upload", enctype="multipart/form-data")
+          div(class="input-group mt-3")
+            div(class="input-group-prepend")
+              span(class="input-group-text") Choose file
+            input(type='file', id='file1', name='file1', class='form-control')
+          button(class="btn-primary btn mt-3", type="submit") Upload File
+      div(class="mt-5 p-3 col-md-8 offset-md-2 text-center")
+        form.test-form(method="post", action="/getfile")
+          div(class="input-group mb-3")
+              div(class="input-group-prepend")
+                span(class="input-group-text", id="inputGroup-default") File Name
+              input(type='text', id='text1', placeholder='Enter file name', name='text1', class='form-control')
+          button(type="submit", class="btn btn-secondary") Send Form
+          p.text-muted File name is the original name of the file you uploaded
+      div.col
+        img(src= imgurl)
