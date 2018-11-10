@@ -1,7 +1,7 @@
 {
-  "name": "node_express_boiler",
+  "name": "multer_gridfs_storage_demo",
   "version": "1.0.0",
-  "description": "Express Node boilerplate",
+  "description": "Multer Gridfs Storage Demo",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
