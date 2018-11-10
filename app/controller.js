@@ -2,11 +2,12 @@ const MongoClient = require('mongodb');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage')
 
-const url = "mongodb://dbuser:dbuser1@ds155823.mlab.com:55823/gridfs_test";
-const dbName = "gridfs_test";
+//I used an mlab Sandbox DB. Substitute the details with your own
+const url = "mongodb://<dbuser>:<dbpwd>@ds112345.mlab.com:12435/your_db_name";
+const dbName = "your_db_name";
 
 let storage = new GridFsStorage({
-  url: "mongodb://dbuser:dbuser1@ds155823.mlab.com:55823/gridfs_test",
+  url: "mongodb://<dbuser>:<dbpwd>@ds112345.mlab.com:12435/your_db_name",
   file: (req, file) => {
     return {
       bucketName: 'test',       //Setting collection name, default name is fs
