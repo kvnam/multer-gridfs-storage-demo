@@ -42,9 +42,7 @@ module.exports.uploadFile = (req, res) => {
 
 module.exports.getFile = (req, res) => {
   //Accepting user input directly is very insecure and should 
-  //never be allowed in a production app.
-  //Sanitize the input before accepting it
-  //This is for demonstration purposes only
+  //never be allowed in a production app. Sanitize the input.
   let fileName = req.body.text1;
   //Connect to the MongoDB client
   MongoClient.connect(url, function(err, client){
@@ -87,7 +85,5 @@ module.exports.getFile = (req, res) => {
       
     });
   });
-
-
 };
 
