@@ -21,6 +21,6 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
-    "request": "^2.88.0"
+    "supertest": "^3.3.0"
   }
 }
