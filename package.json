@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha /**/*.tests.js"
+    "test": "mocha app/test/*.tests.js"
   },
   "author": "Kavita N Ganguli",
   "license": "ISC",
@@ -19,5 +19,8 @@
     "multer": "^1.4.1",
     "multer-gridfs-storage": "^3.2.3",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "request": "^2.88.0"
   }
 }
